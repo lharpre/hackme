@@ -1,0 +1,88 @@
+/** Normalisation **/
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: white;
+}
+
+/** Containers **/
+.idx-pg-cntr {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.idx-left-nav {
+    margin: 40px 50px 0 20px;
+    height: 500px;
+    width: 300px;
+    background: rgb(20, 25, 45);
+    box-shadow: 0px 0px 5px 1px lime;
+}
+
+.idx-main-cntr {
+    margin: 40px 50px 0 0;
+    height: 500px;
+    background: rgb(20, 25, 45);
+    box-shadow: 0px 0px 5px 1px lime;
+    width: 100%;
+    color: white;
+}
+
+/** Left-Side Navigation **/
+/** Login & Register Form **/
+#form-login form, #form-reg form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+h4 {
+    margin: 10px auto;
+    font-size: 1.2rem;
+    color: lime;
+    text-shadow: 0.5px 0.5px blue;
+}
+
+#form-login form input[type="password"], #form-login form input[type="text"],
+#form-reg form input[type="password"], #form-reg form input[type="text"], #form-reg form input[type="email"] {
+    margin: 5px auto;
+    width: 80%;
+}
+
+.btn-submit {
+    width: 45%;
+    margin: 5px auto;
+    padding: 7.5px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: white;
+    background-color: #ce2525;
+    border: none;
+    border-radius: 300px;
+}
+
+.btn-submit:hover {
+    background-color: #ce3e25;
+    cursor: pointer;
+}
+
+/** Register Account **/
+.register-password {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    text-align: center;
+    color: white;
+}
+
+.register-password p {
+    margin: 5px 0;
+}
+
+.register-password p:hover {
+    color: rgb(180, 180, 255);
+    cursor: pointer;
+}

@@ -1,0 +1,49 @@
+{% extends'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="idx-pg-cntr">
+        <div class="idx-left-nav">
+            <!--Login Form-->
+            <div id="form-login">
+                <form method="POST" action="/login">
+                    <h4>Login</h4>
+                    <input type="text" name="account" placeholder="Account">
+                    <input type="password" name="password" placeholder="Password">
+                    <input class="btn-submit" type="submit" value="ENTER">
+                </form>
+            </div>
+            <!--Register, & Forgot Password-->
+            <div id="reg-pass" class="register-password">
+                <p onclick="register()">Register</p>
+                <p onclick="forgotPassword()">Forgot Password?</p>
+            </div>
+
+            <!--Register Form-->
+            <div id="form-reg" style="display: none">
+                <form method="POST" action="/register">
+                    <h4>Register</h4>
+                    <input type="text" name="account" placeholder="Account">
+                    <input type="password" name="password" placeholder="Password">
+                    <input type="email" name="email" placeholder="Email">
+                    <input class="btn-submit" type="submit" value="SUBMIT" onclick="newRegister()">
+                </form>
+            </div>
+
+            <!--Whats New Notice Board-->
+            <div class="notice-board">
+                
+            </div>
+        </div>
+
+        <div class="idx-main-cntr">
+            <p>Hello {{username}}</p>
+
+        </div>
+    </div>
+
+    <script src="static/js/account.js"></script>
+{% endblock %}
