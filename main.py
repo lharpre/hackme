@@ -4,7 +4,7 @@ import mysql.connector as sql
 app = Flask(__name__)
 
 # Configure Host Variables
-host_ip = '000.000.0.00'
+host_ip = ''
 host_port = 5000
 app.secret_key = b'session-variable'
 

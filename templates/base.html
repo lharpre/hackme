@@ -10,13 +10,15 @@
         {% endblock %}
     </head>
     <body>
-        <header>
-            <div class="nav-header">
-                <h1 class="title">HackMe</h1>
-                <p class="welcome"><strong>A website for hackers</strong> </p>
-            </div>
-        </header>
-        {% block body %}
-        {% endblock %}
+        <div id="main-pg-content">
+            <header>
+                <div class="main-nav-header">
+                    <h1 class="title">HackMe</h1>
+                    <p class="welcome"><strong>A website for hackers</strong> </p>
+                </div>
+            </header>
+            {% block body %}
+            {% endblock %}
+        </div>
     </body>
 </html>

@@ -23,15 +23,22 @@ html, body {
     background: rgb(10,15,25);
 }
 
+#main-pg-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1240px;
+}
+
 /** Header **/
-header {
+#main-pg-content header {
     display: flex;
     height: 50px;
     background: rgba(0,0,0, 0.5);
 }
 
 /** Navigation Header **/
-.nav-header {
+.main-nav-header {
     display: flex;
     justify-content: flex-start;
     border-bottom: 1px solid lime;
