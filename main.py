@@ -25,7 +25,7 @@ def login():
             acc = request.form['account']
             pwd = request.form['password']
             # Connect to database
-            connection = sql.connect(host='127.0.0.1', database='', user='', password='',  port=3306)
+            connection = db_connection()
             # Query Database
             cursor = connection.cursor()
             cursor.execute(f'SELECT * FROM users WHERE user = "{acc}" AND pass = "{pwd}";')
@@ -44,6 +44,7 @@ def login():
             print('[-] MySQL Error: {}'.format(err))
 
         finally:
+            connection.close()
             return redirect(url_for('index'))
     else:
         #Method was a GET Request
@@ -58,7 +59,7 @@ def register():
             acc = request.form['account']
             pwd = request.form['password']
             # Connect to database
-            connection = sql.connect(host='127.0.0.1', database='', user='', password='',  port=3306)
+            connection = db_connection()
             # Query Database
             cursor = connection.cursor()
             cursor.execute(f'INSERT INTO users (user, pass) VALUES ("{acc}","{pwd}")')
@@ -70,11 +71,15 @@ def register():
             connection.rollback()
 
         finally:
+            connection.close()
             return redirect(url_for('index'))
     else:
         #Method was Not a POST Request
         print("[-] Error: Request sent to /register was NOT a POST request")
         return redirect(url_for('index'))
+
+def db_connection():
+    return sql.connect(host='127.0.0.1', database='', user='', password='',  port=3306)
 
 # Flask Debug Tool
 if __name__ == '__main__':
