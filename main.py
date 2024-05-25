@@ -47,7 +47,7 @@ def login():
             connection.close()
             return redirect(url_for('index'))
     else:
-        #Method was a GET Request
+        # Bad Request
         print("[-] Error: Request sent to /login was NOT a POST request")
         return redirect(url_for('index'))
 
@@ -74,10 +74,11 @@ def register():
             connection.close()
             return redirect(url_for('index'))
     else:
-        #Method was Not a POST Request
+        # Bad Request
         print("[-] Error: Request sent to /register was NOT a POST request")
         return redirect(url_for('index'))
 
+# Database Input Variables and Connection
 def db_connection():
     return sql.connect(host='127.0.0.1', database='', user='', password='',  port=3306)
 

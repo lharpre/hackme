@@ -7,6 +7,14 @@
     font-family: 'Press Start';
     src: url('fonts/PressStart2P-Regular.ttf');
 }
+@font-face {
+    font-family: 'Rowdy';
+    src: url('fonts/Rowdies-Regular.ttf');
+}
+@font-face {
+    font-family: 'Jersey';
+    src: url('fonts/Jersey15-Regular.ttf');
+}
 
 /** Basic Normalization **/
 * {
@@ -44,6 +52,7 @@ html, body {
 }
 .title {
     margin: auto 20px;
+    font-size: 2.4rem;
     font-family: 'Permanent Marker';
     text-transform: uppercase;
     text-shadow: 1px 0.5px red;
